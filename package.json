@@ -1,0 +1,16 @@
+{
+    "name": "techxchange-workspace",
+    "private": true,
+    "workspaces": [
+      "techxchange-outcomes",
+      "gatsby-theme-carbon"
+    ],
+    "scripts": {
+      "dev": "yarn workspace techxchange-outcomes dev",
+      "build": "yarn workspace techxchange-outcomes build",
+      "clean": "yarn workspace techxchange-outcomes clean",
+      "dev:clean": "yarn workspace techxchange-outcomes dev:clean",
+      "build:clean": "yarn workspace techxchange-outcomes build:clean"
+    }
+  }
+  
