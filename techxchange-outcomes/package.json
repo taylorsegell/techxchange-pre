@@ -1,0 +1,26 @@
+{
+  "name": "techxchange-outcomes",
+  "private": true,
+  "version": "4.1.6",
+  "license": "Apache 2.0",
+  "scripts": {
+    "dev": "gatsby develop -H 0.0.0.0",
+    "dev:clean": "gatsby clean && gatsby develop -H 0.0.0.0",
+    "build": "gatsby build",
+    "build:clean": "yarn clean && gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@carbon/icons-react": "^11.43.0",
+    "gatsby": "^5.13.6",
+    "gatsby-theme-carbon": "^4.1.6",
+    "lunr": "^2.3.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "rxjs": "^7.8.1",
+    "typescript": "^5.6.3",
+    "webpack": "^5.95.0"
+  }
+}

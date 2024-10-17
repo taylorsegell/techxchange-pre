@@ -1,0 +1,286 @@
+.layout :global {
+  .cds--header {
+    top: 4.5rem;
+
+    @include breakpoint('md') {
+      top: 3rem;
+    }
+  }
+  [class*='leftNavWrapper'] {
+    top: 2rem;
+  }
+  [class*='Switcher-module--nav'] {
+    top: 7.5rem;
+
+    @include breakpoint('md') {
+      top: 6rem;
+    }
+  }
+  [class*='PageTabs-module--tabs-container'] {
+    top: 5rem;
+  }
+  [class*='filter-row'] {
+    top: 9rem;
+  }
+  .color-token-table .cds--sticky-container-visible {
+    top: 9rem;
+  }
+}
+
+.layout-no-banner :global {
+  .cds--header {
+    top: 0;
+  }
+  [class*='leftNavWrapper'] {
+    top: 0;
+    // Prevents left nav jitter on page change
+    transition: none;
+  }
+  [class*='Switcher-module--nav'] {
+    top: 3rem;
+  }
+  [class*='PageTabs-module--tabs-container'] {
+    top: 3rem;
+  }
+  [class*='filter-row'] {
+    top: 7rem;
+  }
+  .color-token-table .cds--sticky-container-visible {
+    top: 7rem;
+  }
+  .cds--typeset-style-container .cds--sticky-container-visible {
+    top: 4rem;
+  }
+}
+
+.banner {
+  @include type-style('heading-01');
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: z('floating');
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: $spacing-05;
+  color: $text-04;
+  background: $blue-90;
+  min-height: 4.5rem;
+
+  @include breakpoint('md') {
+    min-height: 3rem;
+  }
+}
+
+.banner-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.banner-icon {
+  margin-right: $spacing-05;
+  fill: currentColor;
+
+  @include breakpoint-down('md') {
+    display: none !important;
+  }
+}
+
+
+.layout :global {
+  .cds--header {
+    top: 0;
+  }
+  [class*='leftNavWrapper'] {
+    top: 0;
+    // Prevents left nav jitter on page change
+    transition: none;
+  }
+  [class*='Switcher-module--nav'] {
+    top: 3rem;
+    overflow-y: auto;
+  }
+  [class*='PageTabs-module--tabs-container'] {
+    top: 3rem;
+  }
+  [class*='filter-row'] {
+    top: 7rem;
+  }
+  .color-token-table .cds--sticky-container-visible {
+    top: 7rem;
+  }
+  .cds--typeset-style-container .cds--sticky-container-visible {
+    top: 4rem;
+  }
+  .cds--row {
+    max-width: 100%;
+  }
+}
+
+// Principles/Layout page
+.divided-section [class*='cds--col'] {
+  margin-bottom: 1.5rem;
+  @include breakpoint('md') {
+    margin-bottom: 0;
+  }
+}
+
+.divided-section {
+  --space: 24px;
+  padding-top: 2rem;
+}
+
+.divided-section:before {
+  content: '';
+  display: block;
+  background: $ui-04;
+  height: 1px;
+  width: calc(100% - 2rem);
+  margin: 0rem 1rem 1.5rem 1rem;
+}
+
+.divided-section h2,
+.divided-section h3,
+.divided-section h4 {
+  margin-top: 0;
+}
+
+.divided-section p {
+  padding-right: 3rem !important;
+}
+
+/* Outcomes Updates */
+
+pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+blockquote p[class*='Markdown-module--paragraph--'][class*='--responsive--'] {
+  font-size: 1rem;
+  font-style: normal;
+  &:nth-of-type(n + 2) {
+    margin-top: 1rem;
+  }
+}
+
+blockquote[class*='Markdown-module--blockquote--'] {
+  margin: 2rem 0 0 0;
+  padding: 1rem 0 1rem 1rem;
+}
+
+blockquote {
+  border: 1px solid #0f62fe;
+  border-left: 4px solid #0f62fe; /* Light gray border for the block */
+
+  margin: 16px 0; /* Adds some margin to space it out */
+  display: inline-block; /* Ensures blockquote stays inline */
+  border-radius: 0; /* Keeps the border rectangular */
+  font-family: 'IBM Plex Sans', sans-serif; /* Use a clean font */
+  position: relative;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  background-color: #d0e2ff;
+}
+
+blockquote::before {
+  content: 'ⓘ Note:'; /* Unicode character for the person icon */
+  font-size: 1em;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: #161616;
+  display: inline;
+  font-family: 'IBM Plex Sans Var', 'Helvetica Neue', Arial, sans-serif;
+
+  line-height: 22.4px;
+  quotes: none;
+  text-rendering: optimizelegibility;
+}
+
+/* Homepage header */
+
+.homepage--header a.cds--tile.cds--tile--clickable {
+  background-color: #0062fe;
+  box-sizing: border-box;
+  cursor: pointer;
+  min-height: 64px;
+  min-width: 128px;
+  padding: 16px 103.078px 16px 16px;
+  position: relative;
+  transition: background 0.07s;
+}
+
+.homepage--header h4.cds--resource-card__title {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans Var', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  text-rendering: optimizelegibility;
+}
+
+.homepage--header h5.cds--resource-card__subtitle {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans Var', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.16px;
+  line-height: 20px;
+  text-rendering: optimizelegibility;
+}
+
+.page-table__container table {
+  width: 100%;
+  flex-basis: 100%;
+}
+
+
+/* Global CSS file */
+.Markdown-module p {
+  width: 100% !important; /* Ensure it overrides existing styles */
+}
+
+.cds-row p {
+  width:100% !important;
+}
+
+.cds--col-lg-4 {
+  display: block;
+  max-inline-size: 50%;
+  flex: 0 0 50%;
+}
+
+@media (min-width: 66rem) {
+  .cds--col-lg-4 {
+    display: block;
+    max-inline-size: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+
+.image-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.image-grid-4 > div {
+  width: 100%;
+}
+
+@media (max-width: 66rem) {
+  .image-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 42rem) {
+  .image-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

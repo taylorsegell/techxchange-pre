@@ -1,0 +1,26 @@
+.call-to-action {
+    z-index: 1;
+  }
+  
+  .callout-link {
+    @include type-style('body-long-02');
+    margin-top: $spacing-06;
+    display: block;
+  }
+  
+  :global {
+    .container--homepage [class*='Main'] {
+      padding-top: 3rem;
+    }
+    .container--white {
+      background: $gray-10;
+    }
+    @media (min-width: 42rem) {
+      .Markdown-module--paragraph--responsive--7fcac {
+        width: 100% !important; // Override the width
+      }
+      .Markdown-module--paragraph--29381 {
+        padding-right: 0 !important; // Override the padding-right
+      }
+    }
+  }
