@@ -5,12 +5,12 @@
       "src": "techxchange-outcomes/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "public" 
+        "distDir": "public"
       }
     }
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" } 
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
